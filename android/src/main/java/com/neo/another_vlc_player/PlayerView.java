@@ -39,10 +39,13 @@ public class PlayerView extends GLSurfaceView {
         mRenderer = new VideoRender(context);
         setRenderer(mRenderer);
 
+    }
+
+    public void enable() {
         mController.addOnFrameListener(onFrameListener);
     }
 
-    public void dispose() {
+    public void disable() {
         mController.removeOnFrameListener(onFrameListener);
     }
 

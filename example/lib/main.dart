@@ -60,11 +60,8 @@ class VideoTest extends StatelessWidget {
           SizedBox(
             width: 320,
             height: 180,
-            child: Hero(
-              tag: "player",
-              child: VlcPlayer(
-                  controller: controller
-              )
+            child: VlcPlayer(
+              controller: controller
             ),
           ),
           Row(
@@ -89,18 +86,15 @@ class VideoTest extends StatelessWidget {
                       DeviceOrientation.landscapeRight,
                     ]);
                     await Navigator.of(context).push(PageTransition(
-                        child: Scaffold(
-                          appBar: AppBar(
-                            title: Text('Fullscreen'),
-                          ),
-                          body: Hero(
-                              tag: "player2",
-                              child: VlcPlayer(
-                                controller: controller,
-                              )
-                          ),
+                      child: Scaffold(
+                        appBar: AppBar(
+                          title: Text('Fullscreen'),
                         ),
-                        type: PageTransitionType.fade
+                        body: VlcPlayer(
+                          controller: controller,
+                        ),
+                      ),
+                      type: PageTransitionType.fade,
                     ));
                     SystemChrome.setPreferredOrientations([
                       DeviceOrientation.portraitUp,

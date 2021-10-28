@@ -3,7 +3,9 @@ package com.neo.another_vlc_player;
 import android.content.Context;
 import android.graphics.SurfaceTexture;
 import android.net.Uri;
+import android.os.Handler;
 import android.view.Surface;
+import android.view.View;
 
 import org.videolan.libvlc.LibVLC;
 import org.videolan.libvlc.Media;
